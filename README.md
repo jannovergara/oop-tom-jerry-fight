@@ -3,7 +3,7 @@ This is an object oriented approach of the popular tv cartoon Tom and Jerry figh
 ## Compile and run,
 ```bash
 $ g++ -std=c++11 main.cpp Fighter.cpp Battle.cpp
-./a.out
+$ ./a.out
 Tom attacks Jerry and deals 0 damage.
 Jerry is down to 120
 Jerry attacks Tom and deals 0 damage.
