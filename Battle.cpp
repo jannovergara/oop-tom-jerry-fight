@@ -2,28 +2,24 @@
 
 #include "Battle.hpp"
 
-Battle::Battle(/* args */)
-{
+Battle::Battle(/* args */) {
 }
 
-Battle::~Battle()
-{
+Battle::~Battle() {
 }
 
 void Battle::StartBattle(Fighter &fighter1, Fighter &fighter2) {
-    while(true) {
-        if(!Battle::GetAttackResult(fighter1, fighter2).compare("Game Over")) {
+    while (true) {
+        if (!Battle::GetAttackResult(fighter1, fighter2).compare("Game Over")) {
             std::cout << "Game over..." << std::endl;
             break;
         }
 
-        if(!Battle::GetAttackResult(fighter2, fighter1).compare("Game Over")) {
+        if (!Battle::GetAttackResult(fighter2, fighter1).compare("Game Over")) {
             std::cout << "Game over..." << std::endl;
             break;
         }
-        
     }
-    
 }
 
 std::string Battle::GetAttackResult(Fighter &fighter1, Fighter &fighter2) {
@@ -39,7 +35,7 @@ std::string Battle::GetAttackResult(Fighter &fighter1, Fighter &fighter2) {
 
     std::cout << fighter2.name << " is down to " << fighter2.health << std::endl;
 
-    if(fighter2.health <= 0) {
+    if (fighter2.health <= 0) {
         std::cout << fighter2.name << " has Died and " << fighter1.name <<
             " is Victorious." << std::endl;
         return "Game Over";
